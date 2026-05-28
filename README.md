@@ -1,2 +1,2 @@
-# JAX-taylor_green_vortex
-Simulates the Taylor-Green vortex using JAX
+# The Taylor-Green vortex with JAX
+The Taylor-Green vortex is a canonical benchmark for turbulence onset and decay in incompressible flows. This notebook implements a pseudospectral solver using the JAX library. `@jax.jit` compiles the full RK2 time step into a single XLA kernel, and `jax.vmap` batches simulations across multiple Reynolds numbers in one compiled kernel. Kinetic energy, dissipation rate, energy spectra, and vorticity fields are tracked and compared against reference simulation data (Brachet et al., 1983).
